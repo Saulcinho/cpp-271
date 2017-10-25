@@ -1,0 +1,69 @@
+// Rock, Paper, Scissors game. //
+// schavez27_lab09
+
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   
+srand(static_cast<unsigned int>(time(NULL)));
+
+string userChoice;
+int computerNumber = rand() % 3 + 1;
+string computerChoice;
+string userName;
+
+if (computerNumber == 1) {
+    computerChoice = "rock";
+} else if (computerNumber == 2) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
+}
+
+    cout << "Welcome to rock, paper, scissors! What is your name?" << endl;
+    getline(cin, userName);
+    cout << "What's up " << userName << "! What you finna pick?" << endl;
+    getline (cin,userChoice);
+
+for (int i=0;i<userChoice.length();i++)
+{ 
+    userChoice[i]=tolower(userChoice[i]);
+}
+
+while (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors") {
+    cout << "Sorry! Didn't get that. Please enter again." << endl;
+    getline(cin, userChoice);
+    for (int i=0;i<userChoice.length();i++){
+        userChoice[i]=tolower(userChoice[i]);
+    }
+}
+
+
+    cout << "Press enter to see if you won..." << endl;
+    cin.ignore();
+
+    if(computerChoice == "rock" && userChoice == "rock") {
+    cout << "It was a tie!" << endl;
+        } else if (computerChoice == "rock" && userChoice == "scissors") {
+    cout << "The computer won! Better luck next time!" << endl;
+        } else if (computerChoice == "paper" && userChoice == "paper") {
+    cout << "It was a tie!" << endl;
+        } else if (computerChoice == "paper" && userChoice == "rock") {
+    cout << "The computer won! Better luck next time!" << endl;
+        } else if (computerChoice == "scissors" && userChoice == "scissors") {
+    cout << "It was a tie!" << endl;
+        } else if (computerChoice == "scissors" && userChoice == "paper") {
+    cout << "The computer won! Better luck next time!" << endl;
+        } else {
+    cout << "Congrats! You won!" << endl;
+}
+
+return 0;
+
+}
