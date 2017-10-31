@@ -1,0 +1,25 @@
+// Modified "Rule of 72" project with command argument lines. //
+
+#include <iostream>
+
+using namespace std;     
+
+int main(int argc, char* argv[])
+{
+    cout << "argc = " << argc << endl; 
+   for(int i = 0; i < argc; i++) 
+      cout << "argv[" << i << "] = " << argv[i] << endl;
+      
+    double interestRate,
+        yearsToDouble;
+        
+    cout << "Enter the annual interest rate (as a % of 100): ";
+    cin >> interestRate;
+    
+    // Determines when(in years) it takes for their investments to double.
+    yearsToDouble=72.0/interestRate;
+    
+    cout << "Years to double investment : " << yearsToDouble << endl;
+    
+    return 0;
+}
