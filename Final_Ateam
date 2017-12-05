@@ -1,3 +1,5 @@
+// Final w/ Jeff and Maurice //
+// schavez27_lab_final //
 #include <iostream>
 #include <ctime>
 #include <math.h>
@@ -38,7 +40,7 @@ string chnum[] = {chyr1,chyr2,chyr3,chyr4,chyr5,chyr6,chyr7,chyr8,chyr9,chyr10,c
 
 int main()
 {
-int d,m,yy, difference, chyr;
+int d,m,yy, difference,para, chyr;
 double pc, ic, ec;
 string zz;
 cout <<"Please give me your date of birth- day, month, year ie 15 4 1986"<<endl;
@@ -75,7 +77,7 @@ printsw(ecw);
 cout <<" Your Intellectual wave is "<< ic <<" days into the 33 day cycle here is your approximate graph"<<endl;
 printsw(icw);
 //added paragraphs
-para= (mm % 9)
+para= (m % 9);
 //cout message I corresponded the paragraphs with
 cout<< "By the looks of things... you fall under the category of... " <<btnum[para]<<endl;
 //Here we get the index of the horoscope animal according to birth year. They go from 0 to 11 
